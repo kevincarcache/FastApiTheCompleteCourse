@@ -3,10 +3,10 @@ from fastapi import Body, FastAPI
 app = FastAPI()
 
 BOOKS = [
-    {'title': 'Title One', 'author': 'Author One', 'category': 'science'},
-    {'title': 'Title Two', 'author': 'Author Two', 'category': 'history'},
-    {'title': 'Title Three', 'author': 'Author Three', 'category': 'math'},
-    {'title': 'Title Four', 'author': 'Author Three', 'category': 'math'},
+    {'title': 'Atomic Habits', 'author': 'James Clear', 'category': 'self-help'},
+    {'title': 'The 5 Second Rule', 'author': 'Mel Robbins', 'category': 'self-help'},
+    {'title': 'The Let Them Theory', 'author': 'Mel Robbins', 'category': 'self-help'},
+    {'title': 'The Mountain Is You', 'author': 'Brianna Wiest', 'category': 'self-help'},
 ]
 
 @app.get('/books')

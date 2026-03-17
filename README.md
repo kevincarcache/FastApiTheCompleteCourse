@@ -19,8 +19,8 @@ Estos archivos están pensados como ejemplos pequeños y ejercicios independient
 ### `Project1/`
 Incluye un proyecto inicial con FastAPI orientado a la gestión de libros. En esta carpeta hay dos versiones de la API:
 
-- `books.py`: versión sencilla con una lista en memoria y endpoints básicos.
-- `books2.py`: versión un poco más estructurada, con un modelo de entrada usando `Pydantic`.
+- `books.py`: versión sencilla con una lista en memoria y endpoints básicos usando libros reales de autoayuda.
+- `books2.py`: versión más completa con validación usando `Pydantic`, asignación automática de `id` y operaciones CRUD sobre una colección de 10 libros de autoayuda.
 
 También incluye un archivo `requirements.txt` con las dependencias necesarias para ejecutar la API.
 
@@ -74,3 +74,5 @@ Una vez ejecutada la aplicación, FastAPI genera documentación interactiva en:
 ## Objetivo del repositorio
 
 Este proyecto funciona como base de aprendizaje. Primero se practican los fundamentos de Python y luego se aplican esos conocimientos en una API sencilla con FastAPI.
+
+Actualmente, el ejemplo principal de FastAPI trabaja con una colección de libros de autoayuda populares para practicar búsquedas, filtros, creación, actualización y eliminación de registros en memoria.
