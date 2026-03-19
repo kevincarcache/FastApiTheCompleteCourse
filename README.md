@@ -1,6 +1,6 @@
 # FastApiTheCompleteCourse
 
-Repositorio de práctica para aprender Python y FastAPI siguiendo un curso. Aquí se combinan ejercicios básicos del lenguaje con un primer proyecto de API usando FastAPI.
+Repositorio de práctica para aprender Python y FastAPI siguiendo un curso. Aquí se combinan ejercicios básicos del lenguaje con varios proyectos de API usando FastAPI.
 
 ## Contenido del repositorio
 
@@ -24,14 +24,26 @@ Incluye un proyecto inicial con FastAPI orientado a la gestión de libros. En es
 
 También incluye un archivo `requirements.txt` con las dependencias necesarias para ejecutar la API.
 
+### `TodoApp/`
+Incluye un segundo proyecto con FastAPI para administrar tareas pendientes.
+
+- usa `SQLAlchemy` para persistir los datos
+- utiliza una base de datos `SQLite` local (`todos.db`)
+- expone endpoints CRUD para crear, consultar, actualizar y eliminar tareas
+- valida la entrada con `Pydantic`
+
 ## Tecnologías usadas
 
 - Python
 - FastAPI
 - Pydantic
 - Uvicorn
+- SQLAlchemy
+- SQLite
 
-## Cómo ejecutar el proyecto de FastAPI
+## Cómo ejecutar los proyectos
+
+### `Project1`
 
 1. Entrar a la carpeta del proyecto:
 
@@ -64,6 +76,33 @@ O, si quieres probar la segunda versión:
 uvicorn books2:app --reload
 ```
 
+### `TodoApp`
+
+1. Entrar a la carpeta del proyecto:
+
+```bash
+cd TodoApp
+```
+
+2. Crear y activar un entorno virtual si se desea:
+
+```bash
+python -m venv venv
+source venv/bin/activate
+```
+
+3. Instalar dependencias:
+
+```bash
+pip install -r requirements.txt
+```
+
+4. Levantar la API:
+
+```bash
+uvicorn main:app --reload
+```
+
 ## Documentación automática
 
 Una vez ejecutada la aplicación, FastAPI genera documentación interactiva en:
@@ -73,6 +112,6 @@ Una vez ejecutada la aplicación, FastAPI genera documentación interactiva en:
 
 ## Objetivo del repositorio
 
-Este proyecto funciona como base de aprendizaje. Primero se practican los fundamentos de Python y luego se aplican esos conocimientos en una API sencilla con FastAPI.
+Este repositorio funciona como base de aprendizaje. Primero se practican los fundamentos de Python y luego se aplican esos conocimientos en proyectos de API con FastAPI.
 
-Actualmente, el ejemplo principal de FastAPI trabaja con una colección de libros de autoayuda populares para practicar búsquedas, filtros, creación, actualización y eliminación de registros en memoria.
+Actualmente, el repositorio incluye un proyecto de libros en memoria y otro de tareas con persistencia en base de datos, lo que permite practicar distintos niveles de complejidad dentro de FastAPI.
